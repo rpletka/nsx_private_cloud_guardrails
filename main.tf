@@ -6,6 +6,10 @@ provider "nsxt" {
     allow_unverified_ssl = true
 }
 
+resource "nsxt_transport_zone" "overlay_transport_zone" {
+  display_name = "1-transportzone-87"
+}
+
 resource "nsxt_policy_group" "Sandbox" {
   display_name = "Sandbox"
   description  = "Sandbox Group provisioned by Terraform"
